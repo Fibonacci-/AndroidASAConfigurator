@@ -7,4 +7,10 @@
     <string name="externalip">External IP</string>
     <string name="internalip">Internal IP</string>
     <string name="netmask">Netmask</string>
+    <string name="ispname">ISP Name</string>
+    <string name="ispusername">ISP Username</string>
+    <string name="ppoepass">PPOE pass</string>
+    <string name="enablessh">Enable external SSH?</string>
+    <string name="notelnet">Guess What? You\'re not fucking using telnet!</string>
+    <string name="save">Save</string>
 </resources>

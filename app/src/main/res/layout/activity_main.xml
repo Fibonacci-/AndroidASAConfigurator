@@ -1,145 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.helwigdev.asaconfigurator.MainActivity">
+    tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/b_dialup"
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="0dp"
-        android:text="@string/dialup"
-        app:layout_constraintRight_toLeftOf="@+id/b_dsl"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/et_enablepass" />
+        tools:context="com.helwigdev.asaconfigurator.MainActivity">
 
-    <Button
-        android:id="@+id/b_dsl"
-        android:layout_height="wrap_content"
-        android:layout_width="0dp"
-        android:text="@string/dsl"
-        app:layout_constraintLeft_toRightOf="@+id/b_dialup"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/et_enablepass"
-        android:layout_marginEnd="8dp" />
+        <Button
+            android:id="@+id/b_dialup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/dialup"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/b_dsl"
+            app:layout_constraintTop_toBottomOf="@+id/et_enablepass" />
 
-    <EditText
-        android:id="@+id/et_hostname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="text"
-        android:gravity="center"
-        android:hint="@string/hostname"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        <Button
+            android:id="@+id/b_dsl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/dsl"
+            app:layout_constraintLeft_toRightOf="@+id/b_dialup"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_enablepass" />
 
-    <EditText
-        android:id="@+id/et_enablepass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/enablepass"
-        android:gravity="center"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/et_hostname"
-        app:layout_constraintRight_toRightOf="@+id/et_hostname" />
+        <EditText
+            android:id="@+id/et_hostname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/hostname"
+            android:inputType="text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/et_externalIP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="@string/externalip"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b_dialup"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        <EditText
+            android:id="@+id/et_enablepass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/enablepass"
+            android:inputType="textPassword"
+            app:layout_constraintRight_toRightOf="@+id/et_hostname"
+            app:layout_constraintTop_toBottomOf="@+id/et_hostname" />
 
-    <EditText
-        android:id="@+id/et_internalip"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="14dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/internalip"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/et_internalnetmask"
-        app:layout_constraintTop_toBottomOf="@+id/et_externalIP"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        <EditText
+            android:id="@+id/et_externalIP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/externalip"
+            android:inputType="text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b_dialup" />
 
-    <EditText
-        android:id="@+id/et_internalnetmask"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="14dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/netmask"
-        app:layout_constraintLeft_toRightOf="@+id/et_internalip"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_externalIP"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        <EditText
+            android:id="@+id/et_internalip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:hint="@string/internalip"
+            android:inputType="text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/et_internalnetmask"
+            app:layout_constraintTop_toBottomOf="@+id/et_externalIP" />
 
-    <EditText
-        android:id="@+id/et_ispname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="84dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/et_internalip" />
+        <EditText
+            android:id="@+id/et_internalnetmask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:hint="@string/netmask"
+            android:inputType="text"
+            app:layout_constraintLeft_toRightOf="@+id/et_internalip"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_externalIP" />
 
-    <EditText
-        android:id="@+id/et_ppoeuser"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/et_ppoepass"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/et_ispname"
-        android:layout_marginRight="8dp" />
+        <EditText
+            android:id="@+id/et_ispname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="31dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/ispname"
+            android:inputType="text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_internalip" />
 
-    <EditText
-        android:id="@+id/et_ppoepass"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintLeft_toRightOf="@+id/et_ppoeuser"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/et_ispname"
-        android:layout_marginLeft="8dp" />
+        <EditText
+            android:id="@+id/et_ppoeuser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/ispusername"
+            android:inputType="textEmailAddress"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/et_ppoepass"
+            app:layout_constraintTop_toBottomOf="@+id/et_ispname" />
 
-</android.support.constraint.ConstraintLayout>
+        <EditText
+            android:id="@+id/et_ppoepass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/ppoepass"
+            android:inputType="textPassword"
+            app:layout_constraintLeft_toRightOf="@+id/et_ppoeuser"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_ispname" />
+
+        <CheckBox
+            android:id="@+id/cb_ssh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/enablessh"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_ppoeuser" />
+
+        <TextView
+            android:id="@+id/tv_notelnet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/notelnet"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_ssh" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
