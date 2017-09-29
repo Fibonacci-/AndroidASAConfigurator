@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ASA Configurator</string>
+    <string name="dialup">Dial-Up</string>
+    <string name="dsl">DSL</string>
+    <string name="hostname">Hostname</string>
+    <string name="enablepass">Enable pass</string>
+    <string name="externalip">External IP</string>
+    <string name="internalip">Internal IP</string>
+    <string name="netmask">Netmask</string>
+</resources>
